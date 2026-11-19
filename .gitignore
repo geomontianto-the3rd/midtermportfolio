@@ -1,9 +1,18 @@
 # Local secrets
 /includes/config.php
 
+# Generated server files
+/error_log
+
+# Common IDE and OS files
+.vscode/
+.idea/
+*.log
+
 # User-uploaded files (keep folder placeholder)
 /uploads/*
 !/uploads/.gitkeep
+!/uploads/.htaccess
 
 # Local/system files
 .DS_Store
