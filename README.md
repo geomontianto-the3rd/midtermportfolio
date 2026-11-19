@@ -37,15 +37,31 @@ The root `index.html` is a static GitHub Pages preview. It uses sample portfolio
 
 ## InfinityFree Deployment
 
-1. Clone or upload the repository into the hosting website directory.
-2. Create a MySQL database and database user in InfinityFree control panel.
-3. Import `database/portfolio.sql` from phpMyAdmin.
-4. Copy `includes/config.local.example.php` to `includes/config.local.php`.
-5. Enter the InfinityFree MySQL host, database name, username, and password.
-6. Generate a new setup key and set `force_https` to `true` when HTTPS is active.
-7. Open `admin/setup.php`, create the administrator, and delete or block that file.
+1. In the InfinityFree control panel, create a MySQL database and note the exact
+   database host, database name, username, and password shown there.
+2. Upload the project contents into the website's `htdocs` directory, keeping
+   the existing folders (`admin`, `assets`, `database`, `includes`, and
+   `uploads`) in place. Do not upload `.git` or overwrite the host's unrelated
+   files.
+3. Use the hosting control panel's phpMyAdmin to select the new database and
+   import `database/portfolio.sql`.
+4. Create `htdocs/includes/config.local.php` by copying
+   `includes/config.local.example.php`. In that file, set `db_host`, `db_name`,
+   `db_user`, and `db_pass` to the exact values from the control panel.
+   InfinityFree database hosts are account-specific and are not `localhost`.
+5. Set a unique, random `setup_key` of at least 12 characters, keep `debug`
+   set to `false`, and set `force_https` to `true` after HTTPS is enabled.
+6. Visit `/admin/setup.php` on the site and create the administrator. Then
+   delete `admin/setup.php` from the server.
+7. Test the public site, admin login, contact form, and an image upload.
 
-Do not upload `includes/config.local.php` when pushing to GitHub. Create it separately on each server because the database credentials differ.
+Keep the configuration at `includes/config.local.php`; do not move it to the
+website root or commit it. The tracked `includes/config.local.example.php`
+contains local XAMPP sample values, not production credentials; replace them
+before deploying. The `.htaccess` files protect the config, SQL schema, and
+uploaded files from direct access; retain them when uploading.
+Set the `uploads` directory writable by PHP using the hosting file manager if
+uploads fail, without making it world-writable.
 
 ## Deployment
 
