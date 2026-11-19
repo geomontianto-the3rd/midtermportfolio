@@ -1,5 +1,5 @@
 # Local secrets
-/includes/config.php
+/includes/config.local.php
 
 # Generated server files
 /error_log
