@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-default="system">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Geo | Personal Portfolio</title>
+    <meta name="description" content="Portfolio of Geo, a BS Information Technology student focused on web development, programming, databases, and networking.">
+    <meta name="theme-color" content="#e9f0ed">
+    <script src="assets/js/theme-init.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        :root { --accent: #17694d; --chip: rgba(23, 105, 77, 0.12); }
+        :root[data-theme="dark"] { --accent: #7fdcb7; --chip: rgba(127, 220, 183, 0.16); }
+    </style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+    <div class="container">
+        <div class="navbar glass">
+            <a href="#home" class="logo" aria-label="Geo, back to top">Geo<span>.</span></a>
+            <nav class="nav" id="navMenu" aria-label="Main">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button class="icon-btn theme-btn" id="themeBtn" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+                <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+                <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+            </button>
+            <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+                <svg class="i-open" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+                <svg class="i-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main id="main">
+    <section id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <h1>Hi, I'm Geo.</h1>
+                <p class="role"><span class="sr-only">BSIT Student</span><span id="typing" data-words="BSIT Student" aria-hidden="true">BSIT Student</span></p>
+                <p class="lead">I'm an Information Technology student who enjoys creating websites, learning programming, working with databases, and exploring computer networking.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View projects</a>
+                    <a href="#contact" class="btn btn-ghost">Contact me</a>
+                </div>
+            </div>
+            <figure class="portrait glass">
+                <img src="assets/images/GEO.jpg" width="540" height="960" alt="Portrait of Geo standing on a grass field in a floral shirt">
+                <figcaption class="chip glass"><span>Currently studying</span><strong>BS Information Technology</strong></figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-head"><h2>About</h2><p>My background, education, goals, and interests.</p></div>
+            <div class="panel glass about-panel">
+                <div class="about-copy">
+                    <h3>I'm an aspiring IT professional.</h3>
+                    <p>I'm currently studying for a Bachelor of Science in Information Technology. I'm interested in web development, programming, databases, networking, and cybersecurity.</p>
+                    <p>I learn best through practical projects. My goal is to keep improving my technical skills and eventually work as an IT professional.</p>
+                </div>
+                <dl class="facts">
+                    <div><dt>Education</dt><dd>BS Information Technology</dd></div>
+                    <div><dt>Focus</dt><dd>Web development</dd></div>
+                    <div><dt>Interests</dt><dd>Programming and networking</dd></div>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-head"><h2>Skills</h2><p>Technical skills I'm building through school and personal projects.</p></div>
+            <div class="panel glass">
+                <div class="skill-groups">
+                    <div class="skill-group">
+                        <h3>Web</h3>
+                        <div class="skill" style="--level:90%"><div class="skill-head"><span>HTML5</span><span class="pct">90%</span></div><p>Structured, semantic web pages.</p><div class="bar" aria-hidden="true"><span></span></div></div>
+                        <div class="skill" style="--level:85%"><div class="skill-head"><span>CSS3</span><span class="pct">85%</span></div><p>Responsive, modern interfaces.</p><div class="bar" aria-hidden="true"><span></span></div></div>
+                        <div class="skill" style="--level:75%"><div class="skill-head"><span>JavaScript</span><span class="pct">75%</span></div><p>Interaction and functionality for websites.</p><div class="bar" aria-hidden="true"><span></span></div></div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Programming and data</h3>
+                        <div class="skill" style="--level:70%"><div class="skill-head"><span>Java</span><span class="pct">70%</span></div><p>Basic applications and programming logic.</p><div class="bar" aria-hidden="true"><span></span></div></div>
+                        <div class="skill" style="--level:60%"><div class="skill-head"><span>Python</span><span class="pct">60%</span></div><p>Programming fundamentals and problem solving.</p><div class="bar" aria-hidden="true"><span></span></div></div>
+                        <div class="skill" style="--level:70%"><div class="skill-head"><span>MySQL</span><span class="pct">70%</span></div><p>Databases and SQL queries.</p><div class="bar" aria-hidden="true"><span></span></div></div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Networking and tools</h3>
+                        <div class="skill" style="--level:70%"><div class="skill-head"><span>Networking</span><span class="pct">70%</span></div><p>IP addressing, VLANs, routing, and topology.</p><div class="bar" aria-hidden="true"><span></span></div></div>
+                        <div class="skill" style="--level:65%"><div class="skill-head"><span>Git and GitHub</span><span class="pct">65%</span></div><p>Managing code and publishing projects online.</p><div class="bar" aria-hidden="true"><span></span></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-head"><h2>Projects</h2><p>A selection of my academic and personal work.</p></div>
+            <div class="project-grid">
+                <article class="card glass"><div class="thumb tone-1"><svg viewBox="0 0 320 180" role="img" aria-label="Dashboard illustration"><rect class="s-w" x="28" y="24" width="264" height="132" rx="14"/><rect class="s-a" x="44" y="40" width="72" height="8" rx="4"/><rect class="s-m" x="44" y="66" width="140" height="8" rx="4"/><rect class="s-m" x="44" y="88" width="110" height="8" rx="4"/><rect class="s-m" x="44" y="110" width="150" height="8" rx="4"/></svg></div><div class="card-body"><p class="kicker">Web development</p><h3>OJT Monitoring System</h3><p>A web-based system for monitoring OJT activities, records, and schedules.</p><ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>MySQL</li></ul></div></article>
+                <article class="card glass"><div class="thumb tone-2"><svg viewBox="0 0 320 180" role="img" aria-label="Voting illustration"><rect class="s-w" x="28" y="24" width="264" height="132" rx="14"/><circle class="s-a" cx="56" cy="58" r="9"/><rect class="s-a" x="80" y="54" width="190" height="8" rx="4"/><circle class="s-m" cx="56" cy="92" r="9"/><rect class="s-m" x="80" y="88" width="130" height="8" rx="4"/><circle class="s-m" cx="56" cy="126" r="9"/><rect class="s-m" x="80" y="122" width="80" height="8" rx="4"/></svg></div><div class="card-body"><p class="kicker">Java</p><h3>Online Voting System</h3><p>A system concept for managing voters, candidates, votes, and election results.</p><ul class="tags"><li>Java</li><li>NetBeans</li><li>MySQL</li></ul></div></article>
+                <article class="card glass"><div class="thumb tone-3"><svg viewBox="0 0 320 180" role="img" aria-label="Portfolio illustration"><rect class="s-w" x="28" y="24" width="264" height="132" rx="14"/><circle class="s-a" cx="70" cy="70" r="22"/><rect class="s-a" x="108" y="56" width="120" height="9" rx="4.5"/><rect class="s-m" x="108" y="74" width="84" height="8" rx="4"/><rect class="s-m" x="44" y="108" width="72" height="34" rx="9"/><rect class="s-m" x="124" y="108" width="72" height="34" rx="9"/><rect class="s-m" x="204" y="108" width="72" height="34" rx="9"/></svg></div><div class="card-body"><p class="kicker">Web development</p><h3>Personal Portfolio</h3><p>A responsive personal portfolio built with HTML, CSS, JavaScript, PHP, and MySQL.</p><ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>MySQL</li></ul></div></article>
+                <article class="card glass"><div class="thumb tone-4"><svg viewBox="0 0 320 180" role="img" aria-label="Equipment grid illustration"><rect class="s-w" x="28" y="24" width="264" height="132" rx="14"/><rect class="s-m" x="44" y="40" width="72" height="46" rx="9"/><circle class="s-a" cx="58" cy="54" r="5"/><rect class="s-m" x="124" y="40" width="72" height="46" rx="9"/><circle class="s-a" cx="138" cy="54" r="5"/><rect class="s-m" x="204" y="40" width="72" height="46" rx="9"/><circle class="s-m" cx="218" cy="54" r="5"/><rect class="s-m" x="44" y="96" width="72" height="46" rx="9"/><circle class="s-m" cx="58" cy="110" r="5"/></svg></div><div class="card-body"><p class="kicker">System development</p><h3>Equipment Borrowing System</h3><p>A system concept for recording equipment, borrowers, return dates, and availability.</p><ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Database</li></ul></div></article>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <div class="container">
+            <div class="section-head"><h2>Experience and education</h2><p>My academic and technical development so far.</p></div>
+            <h3 class="subhead">Education</h3>
+            <div class="experience-grid">
+                <article class="card glass"><div class="media tone-1"><svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5-10-5z"/><path d="M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/><path d="M22 9v6"/></svg></div><div class="card-body"><p class="kicker">Current</p><h3>BS Information Technology</h3><p>Building knowledge in programming, web development, databases, and networking.</p></div></article>
+            </div>
+            <h3 class="subhead">Experience</h3>
+            <div class="experience-grid">
+                <article class="card glass"><div class="media tone-2"><svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 8l-4 4 4 4"/><path d="M16 8l4 4-4 4"/><path d="M13.5 5l-3 14"/></svg></div><div class="card-body"><p class="kicker">Training</p><h3>Web Development Practice</h3><p>Practicing HTML, CSS, JavaScript, and responsive design.</p></div></article>
+                <article class="card glass"><div class="media media-photo"><img src="assets/images/cisco.webp" alt="Cisco networking practice" loading="lazy"></div><div class="card-body"><p class="kicker">Networking</p><h3>Cisco Packet Tracer</h3><p>Practicing routers, switches, VLANs, IP addressing, routing, and network topologies.</p></div></article>
+            </div>
+            <h3 class="subhead">Achievements</h3>
+            <div class="experience-grid">
+                <article class="card glass"><div class="media tone-3"><svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg></div><div class="card-body"><p class="kicker">Certificate</p><h3>Achievements</h3><p>Add certificates and awards through the dynamic portfolio's admin dashboard.</p></div></article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-head"><h2>Contact</h2><p>Have a question or an opportunity? Let's connect.</p></div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Let's connect.</h3>
+                    <p>This GitHub Pages version is a static preview. Email me directly or visit my Facebook profile.</p>
+                    <dl class="contact-list">
+                        <div><dt>Email</dt><dd><a href="mailto:Geomontianto@gmail.com">Geomontianto@gmail.com</a></dd></div>
+                        <div><dt>Facebook</dt><dd><a href="https://www.facebook.com/george.montianto" target="_blank" rel="noopener noreferrer">facebook.com/george.montianto</a></dd></div>
+                    </dl>
+                </div>
+                <div class="panel glass">
+                    <h3>Static preview</h3>
+                    <p>This GitHub Pages copy does not connect to the database or store contact messages. Use the InfinityFree deployment for the dynamic contact form and admin dashboard.</p>
+                    <p class="card-link"><a href="mailto:Geomontianto@gmail.com">Send me an email &rarr;</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-row">
+        <a href="#home" class="logo" aria-label="Geo, back to top">Geo<span>.</span></a>
+        <p>&copy; <span id="year">2026</span> Geo. All rights reserved.</p>
+    </div>
+</footer>
+<button class="to-top glass" id="scrollTop" type="button" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
