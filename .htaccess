@@ -1,0 +1,12 @@
+Options -Indexes
+
+<FilesMatch "(^\.|config\.php$|config\.sample\.php$|portfolio\.sql$|README\.md$)">
+    Require all denied
+</FilesMatch>
+
+<IfModule mod_php7.c>
+    php_flag expose_php Off
+</IfModule>
+<IfModule mod_php8.c>
+    php_flag expose_php Off
+</IfModule>
