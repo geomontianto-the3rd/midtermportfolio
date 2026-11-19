@@ -2,6 +2,8 @@
 
 A PHP and MySQL portfolio website with an authenticated administration dashboard.
 
+The root `index.html` is a static GitHub Pages preview. It uses sample portfolio content and does not connect to the database or accept contact submissions. The dynamic site is `index.php` and must run on a PHP/MySQL host such as InfinityFree; Apache is configured to prefer `index.php`.
+
 ## Features
 
 - Dynamic profile, skills, projects, education, experience, and achievements
@@ -57,6 +59,7 @@ Do not upload `includes/config.local.php` when pushing to GitHub. Create it sepa
 ## Repository Structure
 
 - `index.php` - Dynamic public website
+- `index.html` - Static GitHub Pages preview
 - `contact.php` - Validated contact-form handler
 - `admin/` - Authentication and content-management pages
 - `includes/` - Database, security, authentication, and shared helpers
