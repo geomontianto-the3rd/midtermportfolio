@@ -26,12 +26,24 @@ A PHP and MySQL portfolio website with an authenticated administration dashboard
 3. Create a database, for example `geo_portfolio`.
 4. Import `database/portfolio.sql` in phpMyAdmin or with:
    `mysql -u root -p geo_portfolio < database/portfolio.sql`
-5. Copy `includes/config.sample.php` to `includes/config.php`.
-6. Set the database credentials and a strong setup key in `includes/config.php`.
+5. Copy `includes/config.local.example.php` to `includes/config.local.php`.
+6. Set the database credentials and a strong setup key in `includes/config.local.php`.
 7. Open `http://localhost/midtermportfolio/admin/setup.php` and create the first administrator.
 8. After setup, delete `admin/setup.php` from the deployed server.
 
-`includes/config.php` is ignored by Git and must never be committed.
+`includes/config.local.php` is ignored by Git and must never be committed.
+
+## InfinityFree Deployment
+
+1. Clone or upload the repository into the hosting website directory.
+2. Create a MySQL database and database user in InfinityFree control panel.
+3. Import `database/portfolio.sql` from phpMyAdmin.
+4. Copy `includes/config.local.example.php` to `includes/config.local.php`.
+5. Enter the InfinityFree MySQL host, database name, username, and password.
+6. Generate a new setup key and set `force_https` to `true` when HTTPS is active.
+7. Open `admin/setup.php`, create the administrator, and delete or block that file.
+
+Do not upload `includes/config.local.php` when pushing to GitHub. Create it separately on each server because the database credentials differ.
 
 ## Deployment
 
