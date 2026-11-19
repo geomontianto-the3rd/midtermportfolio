@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-/** Read a value from includes/config.php (never exposed to the browser). */
+/** Read a value from includes/config.local.php (never exposed to the browser). */
 function config(string $key, $default = null)
 {
     static $cfg = null;
     if ($cfg === null) {
-        $file = __DIR__ . '/config.php';
+        $file = __DIR__ . '/config.local.php';
         $cfg = is_file($file) ? (require $file) : [];
         if (!is_array($cfg)) {
             $cfg = [];
