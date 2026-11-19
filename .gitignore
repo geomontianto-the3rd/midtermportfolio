@@ -1,0 +1,10 @@
+# Local secrets
+/includes/config.php
+
+# User-uploaded files (keep folder placeholder)
+/uploads/*
+!/uploads/.gitkeep
+
+# Local/system files
+.DS_Store
+Thumbs.db

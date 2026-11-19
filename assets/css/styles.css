@@ -955,3 +955,60 @@ form .btn {
         transition: none !important;
     }
 }
+
+/* =========================================================
+   Additions for the dynamic (PHP + MySQL) version
+   ========================================================= */
+
+.logo-img {
+    display: block;
+    height: 34px;
+    width: auto;
+}
+
+.subhead {
+    margin: 36px 0 16px;
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: var(--muted);
+}
+
+.subhead:first-of-type {
+    margin-top: 0;
+}
+
+.experience-grid + .subhead {
+    margin-top: 44px;
+}
+
+.card .org {
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: var(--ink);
+}
+
+.card-link {
+    margin-top: 14px;
+}
+
+.card-link a {
+    color: var(--accent);
+    font-weight: 700;
+    text-underline-offset: 3px;
+}
+
+.thumb-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Contact-form honeypot: invisible to people, tempting to bots */
+.hp {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}

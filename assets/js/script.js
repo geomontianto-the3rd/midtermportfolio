@@ -50,9 +50,10 @@
     }
 
     // Follow the system setting until the visitor picks a theme themselves
+    const defaultTheme = root.getAttribute("data-default") || "system";
     const onSystemChange = (event) => {
         const saved = store.get("theme");
-        if (saved !== "dark" && saved !== "light") {
+        if (defaultTheme === "system" && saved !== "dark" && saved !== "light") {
             applyTheme(event.matches ? "dark" : "light");
         }
     };
@@ -118,7 +119,9 @@
     const typing = $("#typing");
 
     if (typing && !reduceMotion.matches) {
-        const words = ["BSIT Student"];
+        const words = (typing.getAttribute("data-words") || "")
+            .split("|").map((w) => w.trim()).filter(Boolean);
+        if (!words.length) words.push(typing.textContent.trim() || "Web Developer");
         let wordIndex = 0;
         let charIndex = 0;
         let deleting = false;
@@ -238,7 +241,6 @@
     // ===============================
     // CONTACT FORM
     // ===============================
-    const CONTACT_EMAIL = "Geomontianto@gmail.com";
     const form = $("#contactForm");
 
     if (form) {
@@ -299,31 +301,23 @@
         });
 
         form.addEventListener("submit", (event) => {
-            event.preventDefault();
-
             const results = Object.keys(rules).map((id) => ({ id, valid: validateField(id) }));
             const firstInvalid = results.find((result) => !result.valid);
 
             if (firstInvalid) {
+                // Browser-side check failed: stop here and help the visitor
+                event.preventDefault();
                 showStatus("Fix the highlighted fields and try again.", true);
                 fieldEl(firstInvalid.id).focus();
                 return;
             }
 
-            const name = fieldEl("name").value.trim();
-            const email = fieldEl("email").value.trim();
-            const subject = fieldEl("subject").value.trim();
-            const message = fieldEl("message").value.trim();
-
-            // This site has no server, so the message is handed to the visitor's email app
-            const body = message + "\n\n" + name + "\n" + email;
-            const mailto =
-                "mailto:" + CONTACT_EMAIL +
-                "?subject=" + encodeURIComponent(subject) +
-                "&body=" + encodeURIComponent(body);
-
-            showStatus("Opening your email app with the message ready to send. If nothing opens, write to " + CONTACT_EMAIL + " directly.", false);
-            window.location.href = mailto;
+            // Valid: let the browser POST the form to contact.php (the server validates again)
+            const button = $("button[type=submit]", form);
+            if (button) {
+                button.disabled = true;
+                button.textContent = "Sending...";
+            }
         });
     }
 
