@@ -1,6 +1,6 @@
 Options -Indexes
 
-<FilesMatch "(^\.|config\.php$|config\.sample\.php$|portfolio\.sql$|README\.md$)">
+<FilesMatch "(^\.|config\.local\.php$|config\.local\.example\.php$|config\.sample\.php$|config\.php$|portfolio\.sql$|README\.md$)">
     Require all denied
 </FilesMatch>
 
