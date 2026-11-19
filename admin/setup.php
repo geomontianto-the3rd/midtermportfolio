@@ -4,7 +4,7 @@ require __DIR__ . '/_layout.php';
 
 /*
  * One-time page that creates the FIRST administrator.
- * - Needs the "setup_key" from includes/config.php
+ * - Needs the "setup_key" from includes/config.local.php
  * - Refuses to run once any administrator exists
  * - DELETE THIS FILE from the server after you use it.
  */
@@ -25,7 +25,7 @@ if ($count > 0) {
 if ($setupKey === '' || strlen($setupKey) < 12) {
     http_response_code(403);
     auth_header('Setup disabled');
-    echo '<p>Set a long <code>setup_key</code> (at least 12 characters) in <code>includes/config.php</code> to enable this page.</p>';
+    echo '<p>Set a long <code>setup_key</code> (at least 12 characters) in <code>includes/config.local.php</code> to enable this page.</p>';
     auth_footer();
     exit;
 }
@@ -79,7 +79,7 @@ render_flash();
 <form method="post" class="form" autocomplete="off">
     <?= csrf_field() ?>
     <div class="field">
-        <label for="setup_key">Setup key (from includes/config.php)</label>
+        <label for="setup_key">Setup key (from includes/config.local.php)</label>
         <input type="password" id="setup_key" name="setup_key" required>
     </div>
     <div class="field">
