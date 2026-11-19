@@ -1,0 +1,6 @@
+Options -Indexes
+DirectoryIndex disabled
+
+<FilesMatch "\.(php|phtml|php3|php4|php5|phar|cgi|pl|py|sh|bat|exe|com|jsp|asp|aspx)$">
+    Require all denied
+</FilesMatch>
