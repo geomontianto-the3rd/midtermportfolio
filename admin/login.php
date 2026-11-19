@@ -25,8 +25,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif ($username === '' || $password === '') {
         $error = 'Enter your username (or email) and password.';
     } else {
-        $stmt = db()->prepare('SELECT * FROM admins WHERE username = :u OR email = :u LIMIT 1');
-        $stmt->execute([':u' => $username]);
+        $stmt = db()->prepare('SELECT * FROM admins WHERE username = :username OR email = :email LIMIT 1');
+        $stmt->execute([':username' => $username, ':email' => $username]);
         $admin = $stmt->fetch();
 
         // Always run password_verify, even for unknown users, so response time does not reveal valid usernames
